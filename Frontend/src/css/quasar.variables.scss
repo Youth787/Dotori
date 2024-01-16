@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0c745a815ddd51884dc31369e391749225c441681145d2f16e1489e6ace6d2f6
-size 447
+$dotori-green: #35daa0; // (버튼 테두리)
+$dotori-light-green: #ebf686; // (카드 배경)
+$dotori-light-brown: #cc765a; // (카드 테두리)
+$dotori-deep-brown: #a84d2f; // (글씨)
+$dotori-white: #ffffff; // (텍스트 배경)
+$dotori-black: #000000; // (텍스트)
+$dotori-mint: #d2fff7; // (화면 배경색)
+
+$dotori-border-radius: 20px 20px 20px 20px;
+$dotori-dashed-border: dashed $dotori-light-brown 5px;
+
+
+//$primary: $dotori-green;
