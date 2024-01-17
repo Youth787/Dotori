@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:084c9af0d54ddf0a87531f6a6f562898cebefee7367a5f9f5142c8198bb2e063
-size 454
+const routes = [
+  {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/IndexPage.vue')},
+      { path: 'breakpoints', component: () => import('pages/Breakpoints.vue')},
+  ],
+  },
+
+  // Always leave this as last one,
+  // but you can also remove it
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+];
+
+export default routes;
