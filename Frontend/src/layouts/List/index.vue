@@ -1,19 +1,3 @@
-<template>
-        <q-layout view="hHh lpR lFf">
-            <ListHeader/>
-
-            <ListDrawer/>
-
-            <ListContent/>
-        </q-layout>
-</template>
-
-<script setup>
-import ListHeader from './ListHeader.vue'
-import ListDrawer from './ListDrawer.vue'
-import ListContent from './ListContent.vue'
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+version https://git-lfs.github.com/spec/v1
+oid sha256:092f940961b617760c124b8a281fdf186f0de229a19955443bc2dbf07bb6e42a
+size 313
