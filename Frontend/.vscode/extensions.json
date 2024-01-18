@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe69df51bb9694f57ab3e2bf5d87673904ed799f9216e8be8e32d5440d06578c
-size 265
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "vue.volar",
+    "wayou.vscode-todo-highlight"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "hookyqr.beautify",
+    "dbaeumer.jshint",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}
