@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2d8496e9ff93d5ae304f989e5f34682b2f428aa7c92ea8e27a09f489286f2740
-size 90
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true
+}
