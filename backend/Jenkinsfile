@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Setup build environment') {
+            steps {
+                echo 'Setting up build environment...'
+                sh '''
+                    # 여기에 빌드 환경 구축 작업을 작성합니다.
+                    # 예를 들어, 필요한 패키지를 설치하거나, 환경변수를 설정하는 등의 작업을 수행할 수 있습니다.
+                '''
+            }
+        }
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh '''
+                    # 여기에 빌드 명령을 작성합니다.
+                    # 예를 들어, Java 프로젝트의 경우 'mvn package' 명령을 실행할 수 있습니다.
+                '''
+            }
+        }
+    }
+}
