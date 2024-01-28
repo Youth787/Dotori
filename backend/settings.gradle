@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e03828fa8c89ed13b6ae3ed2ac54b4a4eed2a6e86f69dc70dd07bb7ec0c4ab81
-size 29
+rootProject.name = 'backend'
