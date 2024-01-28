@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a444dd59165b9bf3434451cc0eb3c01480d43f47a2a55c54299a74c8ddd4718
-size 367
+package com.dotori.backend.domain.room.model.dto;
+
+import java.util.Map;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class RoomInitializationDto {
+	private Map<String, Object> sessionProperties;
+	private Map<String, Object> roomInfo;
+}
