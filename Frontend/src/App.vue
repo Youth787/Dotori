@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af65720c3a3ff3b1200a21140a2808d7c13a92453f94f890883de533b94145b9
-size 430
+<template>
+  <router-view />
+</template>
+
+<script>
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'App',
+
+});
+</script>
+<style>
+  @font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .npsfont {
+    font-family: 'NPSfontBold';
+  }
+</style>
