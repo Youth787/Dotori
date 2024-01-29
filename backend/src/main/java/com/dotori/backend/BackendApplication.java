@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:905815f7257719029c52c56e809f74b087fdd79dcd5ebc1cfbeda0c48ff724e5
-size 417
+package com.dotori.backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+
+@SpringBootApplication
+@EnableJpaAuditing
+public class BackendApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(BackendApplication.class, args);
+
+    }
+}
