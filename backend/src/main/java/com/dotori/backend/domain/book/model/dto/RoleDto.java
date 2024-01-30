@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f7cc93564770e105f6b556a68ddd132973eee8f37dfb3767843e407e7d01d98a
-size 290
+package com.dotori.backend.domain.book.model.dto;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@Builder
+@RequiredArgsConstructor
+public class RoleDto {
+	private final Long roleId;
+	private final String name;
+	private final String maskPath;
+}
