@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:40934678c9b34c27be16d108c0c515cbbb5edfbb8e6d6d6b124d6fcf7640506c
-size 412
+import {createApp} from 'vue';
+import {createPinia} from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+
+import App from './App.vue';
+import routes from '~router';
+import axios from 'vue-axios';
+
+const app = createApp(App);
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
+app.use(pinia);
+app.use(routes);
+
+routes.isReady().then(() => {
+  app.mount('#app');
+});
+
