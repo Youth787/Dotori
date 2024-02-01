@@ -1,0 +1,16 @@
+package com.dotori.backend.domain.book.model.dto.response;
+
+import java.util.List;
+
+import com.dotori.backend.domain.book.model.dto.BookDto;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@Builder
+@RequiredArgsConstructor
+public class GetBooksResponse {
+	private final List<BookDto> books;
+}
