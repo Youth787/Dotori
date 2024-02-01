@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2b8861107bdd2be62d85b688cc00afbc3b9dd8559e36d33dc7b6835e792c867c
-size 377
+package com.dotori.backend.domain.book.model.dto;
+
+import java.util.List;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+
+@Getter
+@ToString
+@RequiredArgsConstructor
+public class SceneDetailDto {
+	private final Long sceneId;
+	private final int sceneOrder;
+	private final String backgroundImage;
+	private final List<ScriptDto> scriptDto;
+}
