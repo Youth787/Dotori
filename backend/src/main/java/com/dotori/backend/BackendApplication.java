@@ -1,15 +1,3 @@
-package com.dotori.backend;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
-
-@SpringBootApplication
-@EnableJpaAuditing
-public class BackendApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(BackendApplication.class, args);
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4afa421814d8640216c040ffc844528db64a89ed3087a7017a748166b0799067
+size 607
