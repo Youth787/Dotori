@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2a48c6a86c2bd33cc5169e1a0056e9f950765ae8d19fea1f30f168e372d774d
-size 452
+spring:
+  config:
+    import:
+      - optional:file:env/db.env[.properties]
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+      show-sql: true
+    hibernate:
+      ddl-auto: update
