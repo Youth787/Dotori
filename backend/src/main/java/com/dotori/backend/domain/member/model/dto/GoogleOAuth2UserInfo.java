@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3e8b82c4d1072fcfdc797c1fe623ccfdf405d18befab5d36410408e18582e44e
-size 476
+package com.dotori.backend.domain.member.model.dto;
+
+import java.util.Map;
+
+public class GoogleOAuth2UserInfo extends OAuth2UserInfo {
+
+	public GoogleOAuth2UserInfo(Map<String, Object> attributes) {
+		super(attributes);
+	}
+
+	@Override
+	public String getId() {
+		return (String)attributes.get("sub");
+	}
+
+	@Override
+	public String getNickname() {
+		return (String)attributes.get("name");
+	}
+
+	@Override
+	public String getEmail() {
+		return (String)attributes.get("email");
+	}
+}
