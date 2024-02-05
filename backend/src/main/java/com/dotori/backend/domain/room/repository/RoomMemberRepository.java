@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5fbfa76d9692d1e4c96218167a4eed07ac8d8db0a785bed865e894410fc02eec
-size 375
+package com.dotori.backend.domain.room.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.room.model.entity.RoomMember;
+
+public interface RoomMemberRepository extends JpaRepository<RoomMember, Long> {
+
+	Optional<RoomMember> findByRoomRoomIdAndMemberMemberId(Long roomId, Long memberId);
+}
