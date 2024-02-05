@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dbc60e0f386af546f42a7590452e3d53b9198500634d7e7795e81ed9b39b407e
-size 315
+package com.dotori.backend.domain.book.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.book.model.entity.Scene;
+
+public interface SceneRepository extends JpaRepository<Scene, Long> {
+	List<Scene> findByBook_BookId(Long bookId);
+}

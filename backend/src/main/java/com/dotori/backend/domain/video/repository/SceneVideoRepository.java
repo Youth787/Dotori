@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3a4a62d7bdbda86f7bc744e8b63cf7d58f87c74808dfdd27a7108cf517343e0
-size 263
+package com.dotori.backend.domain.video.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.video.model.entity.SceneVideo;
+
+public interface SceneVideoRepository extends JpaRepository<SceneVideo, Long> {
+}
