@@ -1,15 +1,3 @@
-package com.dotori.backend.domain.book.model.dto;
-
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
-@Getter
-@ToString
-@RequiredArgsConstructor
-public class SceneDto {
-	private final Long sceneId;
-	private final int sceneOrder;
-	private final String backgroundImage;
-	private final BookDto bookDto;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c1b3ecf4e916ec2180e520b33356d13141bd7c41038348623762a5e60df1079
+size 337
