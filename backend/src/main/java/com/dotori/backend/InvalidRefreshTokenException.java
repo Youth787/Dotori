@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea1d01016048e27c1dd7bf622ba1e551cda1cade940ea2ddf80fea82ac09385b
-size 267
+package com.dotori.backend;
+
+
+
+
+public class InvalidRefreshTokenException extends RuntimeException {
+
+    public InvalidRefreshTokenException() {
+        super("Refresh token is invalid or expired.");
+    }
+
+    // 추가적인 생성자 및 메소드 정의 가능
+}
