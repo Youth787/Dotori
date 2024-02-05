@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ce0473dc2d9492a8c18186b92af001f52a1d8da68cbe3e762c65c047d388999
-size 424
+package com.dotori.backend.domain.book.model.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class BookDto {
+	private Long bookId;
+	private String title;
+	private String bookImg;
+	private String author;
+	private String summary;
+	private int roleCnt;
+}
