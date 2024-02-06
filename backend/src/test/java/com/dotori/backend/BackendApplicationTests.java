@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d24926980315d8e643728643275e9d1f8d363b6fa276b147e7cb5f940cdfb1da
-size 425
+package com.dotori.backend;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+
+@SpringBootTest
+@EnableRedisHttpSession
+	// @Import(TestRedisConfig.class) // TestRedisConfig를 로드하기 위한 어노테이션
+class BackendApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
