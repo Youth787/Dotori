@@ -1,13 +1,3 @@
-package com.dotori.backend.domain.book.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import com.dotori.backend.domain.book.model.entity.Role;
-
-@Repository
-public interface RoleRepository extends JpaRepository<Role, Long> {
-	List<Role> findByBook_BookId(Long bookId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a1c335c24b4e0a44c3ee722a8afd95a51e9eb44b8fd72c344e0fc35604dfe28b
+size 373
