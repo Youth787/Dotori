@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:01f0a308d7c8be7b4b28689d05048f5789f5d55a6b9dda733b53d95fc27345bb
-size 440
+package com.dotori.backend.domain.book.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.dotori.backend.domain.book.model.entity.Book;
+
+@Repository
+public interface BookRepository extends JpaRepository<Book, Long> {
+	@Override
+	List<Book> findAll();
+
+	@Override
+	Optional<Book> findById(Long bookId);
+}
