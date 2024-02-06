@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17e4b21141f281fb0ca842be5bbfbf92356af3faee425e59d913c6eec90cff12
-size 244
+package com.dotori.backend.domain.room.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.room.model.entity.Room;
+
+public interface RoomRepository extends JpaRepository<Room, Long> {
+
+}
