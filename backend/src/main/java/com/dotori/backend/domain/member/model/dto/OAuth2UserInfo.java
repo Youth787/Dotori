@@ -1,18 +1,3 @@
-package com.dotori.backend.domain.member.model.dto;
-
-import java.util.Map;
-
-public abstract class OAuth2UserInfo {
-
-	protected Map<String, Object> attributes;
-
-	public OAuth2UserInfo(Map<String, Object> attributes) {
-		this.attributes = attributes;
-	}
-
-	public abstract String getId(); //소셜 식별 값 : 구글 - "sub", 카카오 - "id", 네이버 - "id"
-
-	public abstract String getNickname();
-
-	public abstract String getEmail();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc7af9015ce002d7a505393760681319c71ec65d099bd9e6d353c8899b066157
+size 364
