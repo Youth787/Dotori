@@ -1,10 +1,3 @@
-package com.dotori.backend.domain.video.model;
-
-import com.dotori.backend.domain.video.model.dto.VideoDto;
-import com.dotori.backend.domain.video.model.entity.Video;
-
-public class VideoMapper {
-	public static VideoDto toVideoDto(Video video) {
-		return new VideoDto(video.getVideoId(), video.getPath());
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f962690786c588361c550673161c5b2be24cc70e41594778dac478913cbccdf9
+size 430
