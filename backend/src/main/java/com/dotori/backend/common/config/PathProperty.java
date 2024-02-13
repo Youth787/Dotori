@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1590ea23833aa12689d974447cfecbda69404c5a74538221128bb28e2898e99
-size 353
+package com.dotori.backend.common.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import lombok.Getter;
+
+@Getter
+@Component
+public class PathProperty {
+	@Value("${dotori.domain}")
+	private String DOMAIN;
+
+	@Value("${images.path.profile.db}")
+	private String PROFILE_IMAGE_DB_PATH;
+}

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f8d8fcef76012c60a020e21666b6b9a5f991e4271f7ec3e948d6791f8ab81dc
-size 369
+package com.dotori.backend.domain.member.model.dto.auth;
+
+import java.util.Map;
+
+public abstract class OAuth2UserInfo {
+
+	protected Map<String, Object> attributes;
+
+	public OAuth2UserInfo(Map<String, Object> attributes) {
+		this.attributes = attributes;
+	}
+
+	public abstract String getId();
+
+	public abstract String getNickname();
+
+	public abstract String getEmail();
+}
