@@ -1,18 +1,3 @@
-package com.dotori.backend.domain.member.model.dto;
-
-import java.time.LocalDateTime;
-
-import com.dotori.backend.domain.video.model.dto.VideoDto;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-
-@Getter
-@Builder
-@RequiredArgsConstructor
-public class MemberVideoDto {
-	private final String bookTitle;
-	private final Long videoId;
-	private final String createdAt;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:13eff94e921063dcc289972569c12ff2f7db9cddf5fef8da78ff6712f5abfa35
+size 335
