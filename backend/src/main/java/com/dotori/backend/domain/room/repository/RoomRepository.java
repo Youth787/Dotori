@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f1b186a10739fa588269fb2ee020abde4424ce58a78d38f0e8c48499fb23acd
-size 829
+package com.dotori.backend.domain.room.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.room.model.entity.Room;
+
+public interface RoomRepository extends JpaRepository<Room, Long> {
+	Optional<List<Room>> findAllByOrderByIsRecordingAscCreatedAtDesc();
+	void deleteAllBySessionIdNotIn(List<String> activeSessionIdList);
+}
