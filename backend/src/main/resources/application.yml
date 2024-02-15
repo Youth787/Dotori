@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ca32eb53d320f0a440f612d7567b0d32c1df690c1888e30df3a4909681cf07b
-size 58
+spring:
+  config:
+    import:
+      - application-db.yml
+      - application-security.yml
+      - application-video.yml
+      - application-openvidu.yml
