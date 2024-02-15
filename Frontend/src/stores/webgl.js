@@ -1,19 +1,3 @@
-import {onMounted, ref} from 'vue';
-import {defineStore} from 'pinia';
-import {OpenVidu} from 'openvidu-browser';
-
-import {localAxios} from '../axios/http-commons';
-import {useRouter} from 'vue-router';
-
-
-const axios = localAxios();
-export const useWebGL
-  = defineStore('webGLStore', () => {
-
-
-
-  return {
-
-
-  };
-}, {persist: {storage: sessionStorage}});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6dd365befc65206ec1ddf8c79e4c7e50d8fd21a0c306a0ff971136ff3e5d057f
+size 356
