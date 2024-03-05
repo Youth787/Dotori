@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:effe3a488638fa6be6c6343651826c5aa57068c8446a67c18c38bd3b34b77505
-size 703
+package com.dotori.backend.domain.book;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+
+@TestConfiguration
+public class TestRedisSessionConfig {
+	@Value("${spring.redis.host}")
+	private String REDIS_HOST;
+
+	@Value("${spring.redis.port}")
+	private String REDIS_PORT;
+
+	@Bean
+	public RedisConnectionFactory redisConnectionFactory() {
+		return new LettuceConnectionFactory(REDIS_HOST, Integer.parseInt(REDIS_PORT));
+	}
+
+}

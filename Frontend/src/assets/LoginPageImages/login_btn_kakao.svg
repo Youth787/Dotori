@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca310bb1bfd40c816e610e70db647d229402c8449c0201cb3756d3d37108dd04
-size 596
+<svg width="84" height="87" viewBox="0 0 84 87" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <circle fill="#F7CD2B" cx="42" cy="45" r="42"/>
+        <g fill-rule="nonzero">
+            <rect fill="#FEE500" width="84" height="84" rx="42"/>
+            <path d="M22.5 40.489c0 5.568 3.699 10.448 9.251 13.18a882.787 882.787 0 0 0-1.691 6.4c-.265 1.064.388 1.051.816.766.336-.226 5.344-3.648 7.504-5.125 1.174.176 2.383.268 3.62.268 10.77 0 19.5-6.933 19.5-15.489C61.5 31.935 52.77 25 42 25s-19.5 6.935-19.5 15.489z" fill="#000"/>
+        </g>
+    </g>
+</svg>

@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a9ac528798e2518f4db0ac3e473a6a9685b882e8eb10c218173d1d746e7c32e
-size 951
+<!--<script setup>-->
+
+<!--</script>-->
+
+<!--<template>-->
+<!--  <div v-if="streamManager">-->
+<!--    <ov-video :stream-manager="streamManager"/>-->
+<!--    <div><p>{{ clientData }}</p></div>-->
+<!--  </div>-->
+<!--</template>-->
+
+<!--<script>-->
+<!--  import OvVideo from 'src/webrtctest/OvVideo.vue';-->
+
+<!--  export default {-->
+<!--    name: 'UserVideo',-->
+
+<!--    components: {-->
+<!--      OvVideo,-->
+<!--    },-->
+
+<!--    props: {-->
+<!--      streamManager: Object,-->
+<!--    },-->
+
+<!--    computed: {-->
+<!--      clientData () {-->
+<!--        const { clientData } = this.getConnectionData();-->
+<!--        return clientData;-->
+<!--      },-->
+<!--    },-->
+
+<!--    methods: {-->
+<!--      getConnectionData () {-->
+<!--        const { connection } = this.streamManager.stream;-->
+<!--        return JSON.parse(connection.data);-->
+<!--      },-->
+<!--    },-->
+<!--  };-->
+<!--</script>-->
+<!--<style scoped>-->
+
+<!--</style>-->

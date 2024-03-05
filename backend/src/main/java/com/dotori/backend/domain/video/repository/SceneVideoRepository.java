@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:caaa116db8cd0b495f745d540bfbabd5458a5264410a89a9dd45f1cfeb2e0c93
-size 499
+package com.dotori.backend.domain.video.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.room.model.entity.Room;
+import com.dotori.backend.domain.video.model.entity.SceneVideo;
+
+public interface SceneVideoRepository extends JpaRepository<SceneVideo, Long> {
+	List<SceneVideo> findALlByRoom(Room room);
+
+	Optional<SceneVideo> getSceneVideoByRoomAndSceneOrder(Room room, int sceneOrder);
+}

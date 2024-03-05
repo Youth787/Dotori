@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da71d39ed410e22f16617abf7e36fbf4246548c9f49512e116e305bc8d49f959
-size 411
+package com.dotori.backend.domain.video.service;
+
+import java.io.File;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class VideoDownloadService {
+	public File downloadVideo(String path) {
+		log.info("[downloadVideo] called");
+		log.info("path: {}", path);
+		return new File(path);
+	}
+}

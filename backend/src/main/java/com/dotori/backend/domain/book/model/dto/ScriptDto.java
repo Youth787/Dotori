@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:44f6827e500292cffce2ac1d39b1d4704b14e5d46177337c4e688d75fe947355
-size 405
+package com.dotori.backend.domain.book.model.dto;
+
+import static lombok.AccessLevel.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Getter
+@ToString
+@NoArgsConstructor(access = PRIVATE)
+@AllArgsConstructor
+public class ScriptDto {
+	private Long scriptId;
+	private RoleDto roleDto;
+	private int scriptOrder;
+	private String content;
+}

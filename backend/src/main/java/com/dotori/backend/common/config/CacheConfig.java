@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d284715aa5ccb5d67dc1f77788b47364f29b49afe2486a0f4eb522523f56e584
-size 868
+package com.dotori.backend.common.config;
+
+import java.time.Duration;
+
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializationContext;
+
+@Configuration
+@EnableCaching
+public class CacheConfig {
+	@Bean
+	public RedisCacheConfiguration redisCacheConfiguration() {
+		return RedisCacheConfiguration.defaultCacheConfig()
+			.entryTtl(Duration.ofMinutes(60))
+			.disableCachingNullValues()
+			.serializeValuesWith(
+				RedisSerializationContext.SerializationPair.fromSerializer(
+					new GenericJackson2JsonRedisSerializer()
+				));
+	}
+}
