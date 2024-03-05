@@ -1,15 +1,3 @@
-package com.dotori.backend.domain.book.model.dto;
-
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
-
-@Getter
-@ToString
-@RequiredArgsConstructor
-public class ScriptDto {
-	private final Long scriptId;
-	private final RoleDto roleDto;
-	private final int scriptOrder;
-	private final String content;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44f6827e500292cffce2ac1d39b1d4704b14e5d46177337c4e688d75fe947355
+size 405
