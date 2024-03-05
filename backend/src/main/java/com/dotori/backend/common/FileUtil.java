@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a4413e1539a59edd9ee136a4297ac22dde98293749e5dc197f4600d2cbad017
-size 585
+package com.dotori.backend.common;
+
+import java.io.File;
+import java.util.Arrays;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class FileUtil {
+	public static void deleteDirectory(File file) {
+		log.info("[deleteDirectory] called");
+		if (file == null || !file.exists()) {
+			log.info("폴더가 존재하지 않습니다.");
+			return;
+		} else if (file.delete()) {
+			log.info("{}: 파일이 삭제되었습니다.", file);
+			return;
+		}
+		Arrays.stream(file.listFiles())
+			.forEach(FileUtil::deleteDirectory);
+		file.delete();
+		log.info("[deleteDirectory] completed");
+	}
+}

@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f27590ef812cdd94b358f4e804bbc19957cf1a9d96957396751b8bf97aa981ba
-size 1820
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.17'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.dotori'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '11'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.3.1.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.bytedeco:javacv-platform:1.5.10'
+
+    implementation 'com.google.code.findbugs:jsr305:3.0.2' // nullable annotation 사용을 위해 필요
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.auth0:java-jwt:4.4.0'
+
+    implementation 'io.openvidu:openvidu-java-client:2.29.0'
+
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test:5.7.3'
+
+    runtimeOnly 'com.mysql:mysql-connector-j'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

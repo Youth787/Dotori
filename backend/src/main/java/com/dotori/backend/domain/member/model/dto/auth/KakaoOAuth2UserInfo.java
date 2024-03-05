@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b4d87638486baaf14fe3a030f279853f0c2a4e0edf14ada33f26487275e7fb2
-size 846
+package com.dotori.backend.domain.member.model.dto.auth;
+
+import java.util.Map;
+
+public class KakaoOAuth2UserInfo extends OAuth2UserInfo {
+
+	public KakaoOAuth2UserInfo(Map<String, Object> attributes) {
+		super(attributes);
+	}
+
+	@Override
+	public String getId() {
+		return String.valueOf(attributes.get("id"));
+	}
+
+	@Override
+	public String getNickname() {
+		Map<String, Object> account = (Map<String, Object>)attributes.get("kakao_account");
+		Map<String, Object> profile = (Map<String, Object>)account.get("profile");
+
+		if (account == null || profile == null) {
+			return null;
+		}
+
+		return (String)profile.get("nickname");
+	}
+
+	@Override
+	public String getEmail() {
+		Map<String, Object> account = (Map<String, Object>)attributes.get("kakao_account");
+
+		if (account == null) {
+			return null;
+		}
+		return (String)account.get("email");
+	}
+
+}

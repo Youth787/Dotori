@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1230ec921cd175472d11cc89d09ded91df9ae856993f8ae06c50d8c0f4178a52
-size 640
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": [
+        "src/*"
+      ],
+      "app/*": [
+        "*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "layouts/*": [
+        "src/layouts/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "boot/*": [
+        "src/boot/*"
+      ],
+      "stores/*": [
+        "src/stores/*"
+      ],
+      "vue$": [
+        "node_modules/vue/dist/vue.runtime.esm-bundler.js"
+      ]
+    },
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "dist",
+    ".quasar",
+    "node_modules"
+  ]
+}

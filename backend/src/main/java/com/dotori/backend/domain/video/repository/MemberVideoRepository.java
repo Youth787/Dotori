@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fefc04fe3d286438fd6241b1d13bdd6f1be495a46c202225df2d07a678e1f121
-size 348
+package com.dotori.backend.domain.video.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dotori.backend.domain.member.model.entity.MemberVideo;
+
+public interface MemberVideoRepository extends JpaRepository<MemberVideo, Long> {
+	List<MemberVideo> findByMember_MemberId(Long memberId);
+}

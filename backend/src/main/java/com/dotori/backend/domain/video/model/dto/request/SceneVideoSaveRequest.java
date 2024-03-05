@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:249596e101b99ece2641573e385718340b75be5d5c9fd2ac3938fdbd8948fadc
-size 512
+package com.dotori.backend.domain.video.model.dto.request;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Getter
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public class SceneVideoSaveRequest {
+	@NotNull
+	private Long roomId;
+	@NotNull
+	private Integer sceneOrder;
+	@NotBlank
+	private String savedPath;
+}

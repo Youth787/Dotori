@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e1a5d223cc44b17de54b03b3af381c7fe2aaca80811c26961955683df2ea9dbf
-size 606
+<script setup>
+  import {defineProps, onMounted, ref} from 'vue';
+
+  const props = defineProps({streamManager: Object, id: String});
+
+  const thisvideo = ref();
+  onMounted(() => {
+    thisvideo.value.setAttribute('id', props.id);
+    console.log('props.id : ' + props.id);
+
+    props.streamManager.addVideoElement(document.getElementById(props.id));
+  });
+</script>
+
+<template>
+  <video class='cusvid' autoplay ref='thisvideo' id='myovvideo' />
+</template>
+
+<style scoped>
+  .cusvid {
+    z-index: 2;
+    width: 250px;
+
+    //border-radius: 15px;
+
+    //box-shadow: #C7A96E 0px 0px 3px 1px;
+  }
+
+</style>

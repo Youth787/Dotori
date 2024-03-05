@@ -1,3 +1,98 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3442f67a3bf2029361ab961001c825b41e16c37f031f18dd0922bfd17b19bace
-size 3519
+$dotori-green: #35daa0; // (버튼 테두리)
+$dotori-light-green: #ebf686; // (카드 배경)
+$dotori-light-brown: #cc765a; // (카드 테두리)
+$dotori-deep-brown: #a84d2f; // (글씨)
+$dotori-white: #ffffff; // (텍스트 배경)
+$dotori-black: #000000; // (텍스트)
+$dotori-mint: #d2fff7; // (화면 배경색)
+
+$dotori-border-radius: 20px 20px 20px 20px;
+$dotori-dashed-border: dashed $dotori-light-brown 5px;
+
+
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+$primary: #26a69a;;
+$secondary:  #35daa0;
+$accent: #9c27b0;
+
+$dark: #1d1d1d;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+$space-base   : 16px !default;
+$space-x-base : $space-base !default;
+$space-y-base : $space-base !default;
+
+$space-none : (x: 0, y: 0) !default;
+$space-xs   : (x: ($space-x-base * .25), y: ($space-y-base * .25)) !default;
+$space-sm   : (x: ($space-x-base * .5), y: ($space-y-base * .5)) !default;
+$space-md   : (x: $space-x-base, y: $space-y-base) !default;
+$space-lg   : (x: ($space-x-base * 1.5), y: ($space-y-base * 1.5)) !default;
+$space-xl   : (x: ($space-x-base * 3), y: ($space-y-base * 3)) !default;
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$spaces: ('none': $space-none, 'xs': $space-xs, 'sm': $space-sm, 'md': $space-md, 'lg': $space-lg, 'xl': $space-xl) !default;
+
+$animate-duration : .3s !default;
+$animate-delay    : .3s !default;
+$animate-repeat   : 1 !default;
+
+
+// Max width at which point
+// current size ends
+$breakpoint-xs: 599px !default;
+$breakpoint-sm: 1023px !default;
+$breakpoint-md: 1439px !default;
+$breakpoint-lg: 1919px !default;
+
+$flex-cols      : 12 !default;
+$flex-gutter-xs : ($space-base * .25) !default;
+$flex-gutter-sm : ($space-base * .5) !default;
+$flex-gutter-md : $space-base !default;
+$flex-gutter-lg : ($space-base * 1.5) !default;
+$flex-gutter-xl : ($space-base * 3) !default;
+
+$body-font-size   : 14px !default;
+$body-line-height : 1.5 !default;
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$flex-gutter: ('none': 0, 'xs': $flex-gutter-xs, 'sm': $flex-gutter-sm, 'md': $flex-gutter-md, 'lg': $flex-gutter-lg, 'xl': $flex-gutter-xl) !default;
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default;
+
+
+$breakpoint-xs-max: (map-get($sizes, "sm") - 0.02) !default;
+
+$breakpoint-sm-min: map-get($sizes, "sm") !default;
+$breakpoint-sm-max: (map-get($sizes, "md") - 0.02) !default;
+
+$breakpoint-md-min: map-get($sizes, "md") !default;
+$breakpoint-md-max: (map-get($sizes, "lg") - 0.02) !default;
+
+$breakpoint-lg-min: map-get($sizes, "lg") !default;
+$breakpoint-lg-max: (map-get($sizes, "xl") - 0.02) !default;
+
+$breakpoint-xl-min: map-get($sizes, "xl") !default;
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+body{
+  font-family: 'Black Han Sans', sans-serif;
+}

@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5891c6348c236615dfa19e8a33144594e8f5547fa42906441f575aa82acf1f4d
-size 514
+.DS_Store
+.thumbs.db
+node_modules
+
+env/*
+env
+.env
+
+# Quasar core related directories
+.quasar
+/dist
+/quasar.config.*.temporary.compiled*
+
+# Cordova related directories and files
+/src-cordova/node_modules
+/src-cordova/platforms
+/src-cordova/plugins
+/src-cordova/www
+
+# Capacitor related directories and files
+/src-capacitor/www
+/src-capacitor/node_modules
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# local .env files
+.env.local*

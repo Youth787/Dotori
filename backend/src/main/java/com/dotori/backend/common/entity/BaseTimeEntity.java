@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:55fd2776f5b94e5e5d0b299d867a2a7dee477bd99df0401a165776f68d78a609
-size 746
+package com.dotori.backend.common.entity;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import lombok.Getter;
+
+@MappedSuperclass //BaseTimeEntity를 상속한 엔티티들은 아래 필드들을 컬럼으로 인식하게 된다.
+@EntityListeners(AuditingEntityListener.class) //Auditing(자동으로 값 매핑) 기능 추가
+@Getter
+public abstract class BaseTimeEntity {
+
+	@CreatedDate
+	private LocalDateTime createdAt;
+
+	@LastModifiedDate
+	private LocalDateTime updatedAt;
+}
+

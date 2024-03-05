@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:268476611e23a02b96d075499ebb8eb61bd2aa4e07df14a810f09a6ef472ce1a
-size 556
+<template>
+  <div
+    class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
+  >
+    <div>
+      <div style="font-size: 30vh">404</div>
+
+      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+
+      <q-btn
+        class="q-mt-xl"
+        color="white"
+        text-color="blue"
+        unelevated
+        to="/"
+        label="Go Home"
+        no-caps
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'ErrorNotFound',
+});
+</script>

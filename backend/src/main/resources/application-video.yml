@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51e78bb10e96631f25020cd4c08e75040cb35a091a7ca74e9d479c5c04a31547
-size 304
+spring:
+  config:
+    import:
+      - optional:file:env/video.env[.properties]
+
+videos:
+  path:
+    video: ${VIDEO_DIRECTORY_PATH}
+    scene: ${SCENE_DIRECTORY_PATH}
+    chunk: ${CHUNK_DIRECTORY_PATH}
+
+images:
+  path:
+    profile:
+      save: ${PROFILE_IMAGE_SAVE_PATH}
+      db: ${PROFILE_IMAGE_DB_PATH}

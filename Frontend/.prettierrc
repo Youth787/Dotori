@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a5383e2d6507abe314cf266f8c3e8c042956d6017205c17dfb32277430c3565
-size 677
+{
+    "editor.fomratOnSave": true,
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": true,
+    "rangeStart": 0,
+    "requirePragma": false,
+    "insertPragma": false,
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "printWidth": 200
+            }
+        }
+    ]
+}
